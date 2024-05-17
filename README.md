@@ -1,16 +1,3 @@
-# SE113
+# sếch
 
-- Tổng hợp bài tập môn SE113 của CLC Nhật
-
-## Bài tập các tuần
-
-- Tuần 1: Quiz
-- Tuần 2: Quiz
-- Tuần 3: Quiz
-- Tuần 4: Quiz
-- Tuần 5: Blackbox
-- Tuần 6: Quiz
-- Tuần 7: Blackbox
-- Tuần 8: Quiz
-- Tuần 9: Quiz
-- Tuần 10: Blackbox
+s🐸 théy
