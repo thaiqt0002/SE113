@@ -8,9 +8,10 @@
 - Tuần 2: Quiz
 - Tuần 3: Quiz
 - Tuần 4: Quiz
-- Tuần 5: Blackbox
+- Tuần 5: Blackbox (Xong)
 - Tuần 6: Quiz
-- Tuần 7: Blackbox
+- Tuần 7: Blackbox (Xong)
 - Tuần 8: Quiz
 - Tuần 9: Quiz
-- Tuần 10: Blackbox
+- Tuần 10: Blackbox (Xong)
+- Tuần 11: Blackbox (Xong)
