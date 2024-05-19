@@ -1,74 +1,74 @@
 #include <stdio.h>
 #include <string.h>
 
-int myProgram(void) {
-  int inputOption, decimalNumber, convertedNumber, index;
-  int binaryArray[16];
-  char binaryString[17];
+#define MAX_BINARY_LENGTH 16
+#define MAX_BINARY_STRING_SIZE 17
+#define MAX_INTEGER_VALUE 65535
+
+int main(void) {
+  int input_option, decimal_number, converted_number, index;
+  int binary_array[MAX_BINARY_LENGTH];
+  char binary_string[MAX_BINARY_STRING_SIZE];
 
   printf("[radix conversion]\n");
   printf(" 1) Dec --> Bin\n");
   printf(" 2) Bin --> Dec\n");
   printf("\n");
   printf("Select 1 or 2\n> ");
-  scanf("%d", &inputOption);
+  scanf("%d", &input_option);
 
-  if (inputOption == 1) {
+  if (input_option == 1) {
     printf("\n 1) Dec --> Bin\n\n");
     printf("Input decimal number\n> ");
-    scanf("%d", &decimalNumber);
-    if (decimalNumber < 0 || decimalNumber > 65535) {
+    scanf("%d", &decimal_number);
+    if (decimal_number < 0 || decimal_number > MAX_INTEGER_VALUE) {
       printf("[ERROR] invalid decimal number\n");
       return 1;
     }
 
     printf("Convert it to binary number\n\n");
     index = 0;
-    convertedNumber = decimalNumber;
+    converted_number = decimal_number;
     do {
-      binaryArray[index] = convertedNumber % 2;
-      convertedNumber /= 2;
+      binary_array[index] = converted_number % 2;
+      converted_number /= 2;
       index++;
-    } while (convertedNumber > 0);
+    } while (converted_number > 0);
 
-    printf(" %d --> ", decimalNumber);
+    printf(" %d --> ", decimal_number);
     do {
       index--;
-      printf("%d", binaryArray[index]);
+      printf("%d", binary_array[index]);
     } while (index > 0);
     printf("\n");
-  } else if (inputOption == 2) {
+  } else if (input_option == 2) {
     printf("\n 2) Bin --> Dec\n\n");
     printf("Input binary number\n> ");
-    scanf("%s", binaryString);
-    if ((int)strlen(binaryString) > 16) {
+    scanf("%s", binary_string);
+    if ((int)strlen(binary_string) > MAX_BINARY_LENGTH) {
       printf("[ERROR] too long binary number\n");
       return 1;
     }
 
     printf("Convert it to decimal number\n\n");
-    convertedNumber = 0;
-    for (index = 0; index < (int)strlen(binaryString); index++) {
-      convertedNumber *= 2;
-      if (binaryString[index] == '1') {
-        convertedNumber += 1;
-      } else if (binaryString[index] == '0') {
-        convertedNumber += 0;
+    converted_number = 0;
+    for (index = 0; index < (int)strlen(binary_string); index++) {
+      converted_number *= 2;
+      if (binary_string[index] == '1') {
+        converted_number += 1;
+      } else if (binary_string[index] == '0') {
+        converted_number += 0;
       } else {
         printf("[ERROR] invalid binary number\n");
         return 1;
       }
     }
 
-    printf(" %s --> %d\n", binaryString, convertedNumber);
+    printf(" %s --> %d\n", binary_string, converted_number);
   } else {
     printf("[ERROR] invalid number\n");
     return 1;
   }
 
   return 0;
-}
-
-int main(void) {
-  return myProgram();
 }
