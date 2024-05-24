@@ -2,7 +2,7 @@
 
 ## Exercise 3: Submit two PDF files: the histogram and the kernel density estimation of the cyclomatic numbers.
 
-
+- Xuất ra ở 2 file ex3-1.pdf và ex3-2.pdf
 
 ## Exercise 4: Tính kết quả theo yêu cầu
 
