@@ -16,3 +16,4 @@
 - Tuần 10: Blackbox (Xong)
 - Tuần 11: Blackbox (Xong)
 - Tuần 12: Rstudio (Xong)
+- Tuần 13: Rstudio

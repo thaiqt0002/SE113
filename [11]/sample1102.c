@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "run_test.h"
+#include <stdio.h>
 
 int charge(int order, int member, int sale) {
 
@@ -12,28 +12,23 @@ int charge(int order, int member, int sale) {
   }
 
   if (sale != 0 && sale != 1 && sale != 2) {
-    return -1; 
+    return -1;
   }
 
-  int totalAmount;
   if (sale == 1) {
-    totalAmount = order * 90 / 100; 
+    order = order * 90 / 100;
   } else if (sale == 2) {
-    totalAmount = order * 70 / 100;
-  } else {
-    totalAmount = order;
+    order = order * 70 / 100;
   }
 
   // Calculate the delivery charge
-  int deliveryCharge;
-  if (member == 0 && totalAmount < 2000) {
+  int deliveryCharge = 0;
+  if (member == 0 && order < 2000) {
     deliveryCharge = 410;
-  } else {
-    deliveryCharge = 0;
   }
 
   // Calculate the billing amount
-  int billingAmount = totalAmount + deliveryCharge;
+  int billingAmount = order + deliveryCharge;
 
   return billingAmount;
 }
