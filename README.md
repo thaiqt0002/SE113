@@ -23,3 +23,6 @@
 - [x] Lab 1
 - [x] Lab 2
 - [x] Lab 3
+
+## Tổng hợp cho thi cuối kỳ
+- Nằm trong thư mục Final
