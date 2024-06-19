@@ -18,6 +18,7 @@
 - [x] Tuần 12: Rstudio 
 - [x] Tuần 13: Quiz & Rstudio 
 - [x] Tuần 14: Web Application Usecase
+- [x] Tuần 15: Web Application Testcase
 
 ## Bài tập thực hành
 - [x] Lab 1
